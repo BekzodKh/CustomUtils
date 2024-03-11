@@ -19,21 +19,18 @@ namespace CustomUtils.Scroll
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            Debug.Log(1111);
             Vector2 pressPosition = _camera.ScreenToWorldPoint(eventData.position);
             BeginScrollHandler.Invoke(pressPosition);
         }
 
         public void OnDrag(PointerEventData eventData)
         {
-            Debug.Log(2222);
             Vector2 pressPosition = _camera.ScreenToWorldPoint(eventData.position);
             ContinueScrollHandler.Invoke(pressPosition);
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            Debug.Log(3333);
             Vector2 pressPosition = _camera.ScreenToWorldPoint(eventData.position);
             EndScrollHandler.Invoke(pressPosition);
         }
